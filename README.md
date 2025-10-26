@@ -148,22 +148,8 @@ docker-compose up -d
 # Le serveur se connecte automatiquement
 npm run dev
 ```
-
-## 🤝 Contribution
-
-1. Fork le projet
-2. Créer une branche feature (`git checkout -b feature/AmazingFeature`)
-3. Commit vos changements (`git commit -m 'Add some AmazingFeature'`)
-4. Push vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrir une Pull Request
-
-## 📄 Licence
-
-Ce projet est sous licence ISC. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
 ---
 
 <div align="center">
   <p>Fait avec ❤️ pour Archivus</p>
-  <p>🚀 <strong>API REST moderne avec IA</strong> 🚀</p>
 </div>
