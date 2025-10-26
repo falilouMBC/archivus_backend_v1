@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  # 1. Le service MongoDB
+  mongo:
+    image: mongo:latest # Image officielle de MongoDB
+    container_name: archivus-mongodb
+    restart: always # Redémarre toujours en cas de panne
+    ports:
+      - "27017:27017" # Port standard de MongoDB
+    environment:
+      # Crée la base de données par défaut au démarrage
+      MONGO_INITDB_DATABASE: archivus_db
+    volumes:
+      # Stocke les données de MongoDB sur votre machine pour qu'elles persistent
+      - mongo_data:/data/db
+
+# Définition des volumes (Stockage persistant)
+volumes:
+  mongo_data:
