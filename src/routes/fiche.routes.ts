@@ -5,8 +5,7 @@ import {
     getFicheByIdController,
     updateFicheController,
     deleteFicheController,
-    getFicheByTitleController,
-    regenerateSummaryController
+    getFicheByTitleController
 } from "../controllers/fiche.controller.js";
 import { verifyToken } from "../middlewares/auth.middleware.js";
 

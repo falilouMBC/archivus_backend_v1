@@ -7,17 +7,13 @@
     "start": "node dist/server.js",
     "dev": "nodemon --exec \"node --loader ts-node/esm\" src/server.ts",
     "build": "npx tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "list-models": "node --loader ts-node/esm scripts/list-gemini-models.ts",
-    "list-models-js": "node scripts/list-gemini-models.js",
-    "test-model": "node --loader ts-node/esm scripts/list-gemini-models.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",

@@ -1,6 +1,6 @@
 # 📚 Archivus Backend API
 
-> **API REST moderne** pour l'application Archivus - Système de gestion d'archives intelligent avec IA
+> **API REST moderne** pour l'application Archivus - Système de gestion d'archives
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9+-blue.svg)](https://www.typescriptlang.org/)
@@ -12,8 +12,7 @@
 | Fonctionnalité | Description |
 |----------------|-------------|
 | 🔐 **Authentification JWT** | Inscription, connexion sécurisée, gestion des utilisateurs |
-| 📝 **Gestion des fiches** | CRUD complet avec résumé IA automatique |
-| 🤖 **IA Gemini** | Génération automatique de résumés et tags en français |
+| 📝 **Gestion des fiches** | CRUD complet pour les fiches |
 | 📖 **Documentation Swagger** | Interface interactive pour tester l'API |
 | 🛡️ **Sécurité avancée** | Rate limiting, validation, protection des headers |
 
@@ -21,7 +20,6 @@
 
 - **Node.js** 18+ 
 - **MongoDB** (local ou cloud)
-- **Clé API Google Gemini** ([obtenir ici](https://makersuite.google.com/app/apikey))
 - **Docker** (optionnel, pour MongoDB local)
 
 ## 🚀 Installation rapide
@@ -48,9 +46,6 @@ JWT_SECRET=your_super_secure_jwt_secret_key_here
 
 # Server Configuration
 PORT=5000
-
-# Google Gemini API (obligatoire pour l'IA)
-GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 ### 4. Démarrer MongoDB
@@ -85,35 +80,12 @@ npm run build && npm start
 ### 📝 Gestion des fiches
 | Méthode | Endpoint | Description |
 |---------|----------|-------------|
-| `POST` | `/api/fiches` | Créer une fiche (IA automatique) |
+| `POST` | `/api/fiches` | Créer une fiche |
 | `GET` | `/api/fiches/user/:userId` | Fiches d'un utilisateur |
 | `GET` | `/api/fiches/:id` | Récupérer une fiche |
 | `PUT` | `/api/fiches/:id` | Modifier une fiche |
 | `DELETE` | `/api/fiches/:id` | Supprimer une fiche |
 | `GET` | `/api/fiches/search/:title` | Rechercher par titre |
-| `POST` | `/api/fiches/:id/regenerate-summary` | Régénérer le résumé IA |
-
-## 🤖 Intelligence Artificielle
-
-### ✨ Fonctionnalités IA
-- **Résumé automatique** : Génération de résumés concis en français
-- **Tags intelligents** : Création automatique de mots-clés pertinents
-- **Traitement en français** : Optimisé pour la langue française
-
-### ⚙️ Configuration Gemini
-1. **Obtenir une clé API** : [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. **Configurer l'environnement** : Ajouter `GEMINI_API_KEY=your_key_here` dans `.env`
-3. **Activation automatique** : L'IA se déclenche à chaque création de fiche
-4. **Modèles supportés** : `gemini-pro`, `gemini-pro-vision`
-
-### 🧪 Tester les modèles disponibles
-```bash
-# Lister tous les modèles Gemini disponibles
-npm run list-models
-
-# Tester un modèle spécifique
-npm run test-model gemini-pro
-```
 
 ## 📖 Documentation interactive
 
@@ -127,7 +99,6 @@ npm run test-model gemini-pro
 | `npm run dev` | Développement avec nodemon |
 | `npm run build` | Compilation TypeScript |
 | `npm start` | Mode production |
-| `npm run list-models` | Tester les modèles Gemini |
 
 ## 🛡️ Sécurité
 
